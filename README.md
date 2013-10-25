@@ -1,21 +1,23 @@
 The TCKY Shell
+===============
 Nov. 2011
 
-Features:
-	Executes commands
-	Parses and interprets user input strings
-	Separate commands by semicolon (extra semicolons will be eradicated)
-    	Recursive redirection (Single pipe only)
-	Good-lookin' code
+### Features:
+
+* Executes commands
+* Parses and interprets user input strings
+* Separate commands by semicolon (extra semicolons will be eradicated)
+* Recursive redirection (Single pipe only)
+* Good-lookin' code
 
 
-Bugs + Additional Info:
-     Giving a nonexistent command before > or >> will result in the "command not found" error being printed to the file instead of to the terminal
+### Bugs + Additional Info:
+* Giving a nonexistent command before > or >> will result in the "command not found" error being printed to the file instead of to the terminal
 
-Files & Function Headers:
+### Files & Function Headers:
 
 
-     KYCOMMANDLINE.C
+kycommandline.c
 
 	char* read_line();
      	//reads the input from the commandline and returns a string that is the commandline string
@@ -27,7 +29,7 @@ Files & Function Headers:
      	//Returns the number of args in line by counting the number of spaces
 
      
-     PROCESSOR.C
+processor.c
     
 	int isRedirectSymbol(char* s);
 	//Return 1 if the string is a redirection symbol (checked against an array with symbols)
@@ -56,7 +58,7 @@ Files & Function Headers:
      	//<args2> is only there for future implementation of multiple pipelines
 
 
-     MAIN.C
+main.c
 
      	int main()
     	//puts together kycommandline and processor to create a shell
